@@ -10,3 +10,52 @@
 *.lai
 *.la
 *.a
+
+#include "Fauna.cpp"
+#include  <iostream>
+using namespace std;
+
+int main()
+{
+    int kiek_metu;
+    int kiek_sveria;
+
+    Suo difas;
+
+    cout <<"Iveskite Difo amziu"<<endl;;
+    cin >>kiek_metu;
+    difas.DetiAmziu(kiek_metu);
+    cout <<"Iveskite Difo svori"<<endl;;
+    cin >>kiek_sveria;
+    difas.DetiSvori(kiek_sveria);
+    std::cout << "Difas turi " << difas.ImtiAmziu()
+              << " metus.\n";
+    std::cout << "Difas sveria " << difas.ImtiSvori()
+              << " kilogramus.\n";
+
+    Kate pukis;
+
+    cout <<"Iveskite Pukio amziu"<<endl;;
+    cin >>kiek_metu;
+    pukis.DetiAmziu(kiek_metu);
+    cout <<"Iveskite Pukio svori"<<endl;;
+    cin >>kiek_sveria;
+    pukis.DetiSvori(kiek_sveria);
+    std::cout << "Pukis turi " << pukis.ImtiAmziu()
+              << " metus.\n";
+    std::cout << "Pukis sveria " << pukis.ImtiSvori()
+              << " kilogramus.\n";
+    cout <<"Zologijos sode turimos veisles:"<<endl;
+    cout <<"********************************"<<endl;
+
+    Gyvunas *gyv1 = new Suo;
+    Gyvunas *gyv2 = new Kate;
+    gyv1->ImtiVeisle();
+    gyv2->ImtiVeisle();
+    delete gyv1;
+    delete gyv2;
+
+    cout <<"********************************"<<endl;
+
+    return 0;
+}
